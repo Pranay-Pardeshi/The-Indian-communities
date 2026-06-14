@@ -149,6 +149,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .index-item {
+    display: block;
+    text-decoration: none;
     padding: 12px 16px;
     margin-bottom: 8px;
     border-radius: 8px;
@@ -646,4 +648,274 @@ h1, h2, h3, h4, h5, h6 {
 .image-grid img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(229, 91, 19, 0.2);
+}
+
+/* ==========================================================================
+   Phase 5: Encyclopedia Deep-Dive Typography
+   ========================================================================== */
+/* Encyclopedia Typography & Drop-Caps */
+.drop-cap {
+    float: left;
+    font-size: 4.5rem;
+    line-height: 0.8;
+    padding-right: 12px;
+    padding-top: 6px;
+    color: var(--color-saffron);
+    font-family: var(--font-heading);
+}
+
+.wiki-content h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: var(--color-terracotta-text);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+/* Wiki-Style Infobox */
+.wiki-infobox {
+    float: right;
+    width: 320px;
+    margin: 0 0 20px 30px;
+    background-color: var(--color-cream-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(90, 44, 16, 0.08);
+}
+
+.infobox-title {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--color-white);
+    background-color: var(--color-saffron);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+}
+
+.wiki-infobox ul {
+    list-style: none;
+    padding: 0;
+}
+
+.wiki-infobox li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 1.05rem;
+    color: var(--color-dark-text);
+}
+
+.wiki-infobox li:last-child {
+    border-bottom: none;
+}
+
+.wiki-infobox strong {
+    color: var(--color-terracotta-text);
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+
+/* Responsive adjustment for Infobox */
+@media (max-width: 768px) {
+    .wiki-infobox {
+        float: none;
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+}
+
+/* ==========================================================================
+   Phase 7: Dynamic Open-Source Engine UI
+   ========================================================================== */
+
+.search-box {
+    display: flex;
+    gap: 8px;
+}
+
+#community-search {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+#search-btn {
+    background-color: var(--color-saffron);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#lang-switcher {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    margin-top: 5px;
+}
+
+.loader-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 253, 247, 0.9);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--border-color);
+    border-top: 5px solid var(--color-saffron);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-overlay p {
+    font-family: var(--font-heading);
+    color: var(--color-terracotta-text);
+    font-size: 1.2rem;
+}
+
+/* Wikipedia Content Dynamic Formatting */
+.mw-parser-output h2 {
+    font-size: 1.8rem;
+    color: var(--color-terracotta-text);
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.mw-parser-output h3 {
+    font-size: 1.4rem;
+    color: var(--color-dark-text);
+    margin-top: 20px;
+}
+
+.mw-parser-output ul, .mw-parser-output ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.mw-parser-output p {
+    margin-bottom: 15px;
+}
+
+.infobox.vcard {
+    float: right;
+    width: 300px;
+    background: var(--color-cream-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    margin: 0 0 20px 20px;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.infobox th {
+    text-align: left;
+    padding-right: 10px;
+    color: var(--color-terracotta-text);
+}
+
+.tab-panel blockquote {
+    border-left: 5px solid var(--color-saffron);
+    background: rgba(229, 91, 19, 0.05);
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--color-terracotta-text);
+}
+
+.unavailable-notice {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 40px 20px;
+}
+
+/* ==========================================================================
+   Toast Notifications
+   ========================================================================== */
+.toast-notification {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: var(--color-dark-text);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 10000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast-notification.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+.toast-error {
+    background-color: #D32F2F;
+}
+
+.toast-success {
+    background-color: var(--color-earth-green);
+}
+
+.encyclopedia-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.encyclopedia-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+    color: var(--color-dark-text);
+}
+
+.encyclopedia-list li::before {
+    content: '❖';
+    position: absolute;
+    left: 0;
+    color: var(--color-earth-green);
+    font-size: 1.2rem;
+}
+
+.encyclopedia-list strong {
+    color: var(--color-terracotta-text);
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
 }
