@@ -30,15 +30,32 @@
 
     <main class="app-layout">
         <aside class="sidebar">
+            <h1 class="brand-title">Virasat<br>Archive</h1>
+            <div class="sidebar-controls" style="margin: 20px 0;">
+                <div class="search-box">
+                    <input type="text" id="community-search" placeholder="Search community..." aria-label="Search any Indian community">
+                    <button id="search-btn">🔍</button>
+                </div>
+                <div class="lang-box" style="margin-top: 15px;">
+                    <select id="lang-switcher" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="hi">Hindi (हिन्दी)</option>
+                        <option value="mr">Marathi (मराठी)</option>
+                    </select>
+                </div>
+            </div>
+
             <nav class="community-index">
                 <h2 class="index-title">COMMUNITY INDEX</h2>
                 <ul class="index-list">
-                    <li class="index-item active">Agri Samaj</li>
-                    <li class="index-item placeholder">Koli Community (Coming Soon)</li>
-                    <li class="index-item placeholder">Warli Tribe (Coming Soon)</li>
+                    <li><a href="#" data-community="agri" class="index-item active">Agri Samaj</a></li>
+                    <li><a href="#" data-community="koli" class="index-item">Koli Community</a></li>
+                    <li><a href="#" data-community="warli" class="index-item">Warli Tribe</a></li>
                 </ul>
             </nav>
         </aside>
+
+
 
         <article class="content-viewport">
             <header class="content-header scroll-reveal">
@@ -97,36 +114,16 @@
                 
                 <div class="tab-content-container">
                     <!-- History Panel -->
-                    <div id="panel-history" class="tab-panel active-panel">
-                        <h3>Detailed History</h3>
-                        <p>The Agri community boasts a rich historical narrative deeply entwined with the coastal geography of Maharashtra. Historically known for their expertise in salt panning and agriculture, they have resiliently maintained their socio-cultural identity through centuries of geopolitical shifts.</p>
-                    </div>
+                    <div id="panel-history" class="tab-panel active-panel"></div>
 
                     <!-- Culture Panel -->
-                    <div id="panel-culture" class="tab-panel">
-                        <h3>Culture & Festivals</h3>
-                        <p>Festivals like Holi, Diwali, and the regional Gauri-Ganpati are celebrated with immense fervor, traditional dances, and vibrant community gatherings that anchor their heritage.</p>
-                        <div class="image-grid">
-                            <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&h=400&fit=crop" alt="Indian festival celebration with vibrant colors">
-                            <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?w=600&h=400&fit=crop" alt="Traditional Indian dance performance">
-                        </div>
-                    </div>
+                    <div id="panel-culture" class="tab-panel"></div>
 
                     <!-- Cuisine Panel -->
-                    <div id="panel-cuisine" class="tab-panel">
-                        <h3>Cuisine</h3>
-                        <p>The culinary landscape of the Agri Samaj is characterized by its fiery and aromatic nature, primarily driven by the iconic 'Agri Masala' blend used in traditional curries and seafood dishes.</p>
-                        <div class="image-grid">
-                            <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&h=400&fit=crop" alt="Assortment of traditional Indian spices">
-                            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&h=400&fit=crop" alt="Spicy Indian curry dish">
-                        </div>
-                    </div>
+                    <div id="panel-cuisine" class="tab-panel"></div>
 
                     <!-- Language Panel -->
-                    <div id="panel-language" class="tab-panel">
-                        <h3>Language & Dialect</h3>
-                        <p>The 'Agri Boli' is a highly expressive and vibrant dialect of Marathi. It is uniquely enriched with maritime, agricultural, and hyper-local vocabulary passed down orally through generations.</p>
-                    </div>
+                    <div id="panel-language" class="tab-panel"></div>
                 </div>
             </section>
         </article>
